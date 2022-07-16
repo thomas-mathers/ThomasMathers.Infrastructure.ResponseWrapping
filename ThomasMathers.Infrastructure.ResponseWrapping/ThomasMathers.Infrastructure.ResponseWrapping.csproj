@@ -1,0 +1,16 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+    <PropertyGroup>
+        <TargetFramework>net6.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+        <Authors>tmathers</Authors>
+        <PackageProjectUrl>https://github.com/thomas-mathers/ThomasMathers.Infrastructure.ResponseWrapping</PackageProjectUrl>
+        <RepositoryUrl>https://github.com/thomas-mathers/ThomasMathers.Infrastructure.ResponseWrapping</RepositoryUrl>
+        <RepositoryType>git</RepositoryType>
+        <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <FrameworkReference Include="Microsoft.AspNetCore.App" />
+    </ItemGroup>
+</Project>

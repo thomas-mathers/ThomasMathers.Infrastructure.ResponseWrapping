@@ -1,4 +1,4 @@
-﻿namespace ThomasMathers.Common.ResponseWrapping.Models
+﻿namespace ThomasMathers.Infrastructure.ResponseWrapping.Models
 {
     public record ApiResult
     {

@@ -1,9 +1,9 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Infrastructure;
 using Microsoft.Extensions.DependencyInjection;
-using ThomasMathers.Common.ResponseWrapping.Models;
+using ThomasMathers.Infrastructure.ResponseWrapping.Models;
 
-namespace ThomasMathers.Common.ResponseWrapping.Extensions
+namespace ThomasMathers.Infrastructure.ResponseWrapping.Extensions
 {
     public static class IServiceCollectionExtensions
     {

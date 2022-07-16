@@ -2,9 +2,9 @@
 using Microsoft.AspNetCore.Diagnostics;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Hosting;
-using ThomasMathers.Common.ResponseWrapping.Models;
+using ThomasMathers.Infrastructure.ResponseWrapping.Models;
 
-namespace ThomasMathers.Common.ResponseWrapping.Extensions
+namespace ThomasMathers.Infrastructure.ResponseWrapping.Extensions
 {
     public static class WebApplicationExtensions
     {

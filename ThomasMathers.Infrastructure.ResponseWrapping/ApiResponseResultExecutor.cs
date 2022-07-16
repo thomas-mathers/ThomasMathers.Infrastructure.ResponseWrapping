@@ -2,9 +2,9 @@
 using Microsoft.AspNetCore.Mvc.Infrastructure;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
-using ThomasMathers.Common.ResponseWrapping.Models;
+using ThomasMathers.Infrastructure.ResponseWrapping.Models;
 
-namespace ThomasMathers.Common.ResponseWrapping
+namespace ThomasMathers.Infrastructure.ResponseWrapping
 {
     internal class ApiResultExecutor : ObjectResultExecutor
     {
