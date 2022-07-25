@@ -2,7 +2,7 @@
 {
     public record ApiValidationError
     {
-        public string Property { get; init; }
-        public string Description { get; init; }
+        public string Property { get; init; } = string.Empty;
+        public string Description { get; init; } = string.Empty;
     }
 }

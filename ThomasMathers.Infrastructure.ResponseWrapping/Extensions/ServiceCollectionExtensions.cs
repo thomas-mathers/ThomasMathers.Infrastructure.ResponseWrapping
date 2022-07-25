@@ -5,7 +5,7 @@ using ThomasMathers.Infrastructure.ResponseWrapping.Models;
 
 namespace ThomasMathers.Infrastructure.ResponseWrapping.Extensions
 {
-    public static class IServiceCollectionExtensions
+    public static class ServiceCollectionExtensions
     {
         public static void AddResponseWrapping(this IServiceCollection services)
         {
