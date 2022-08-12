@@ -21,18 +21,12 @@ steps:
   inputs:
     command: 'build'
     arguments: '--configuration $(buildConfiguration)'
-    projects: 'ThomasMathers.Infrastructure.IAM/ThomasMathers.Infrastructure.IAM.csproj'
-- task: DotNetCoreCLI@2
-  displayName: 'dotnet test'
-  inputs:
-    command: 'test'
-    arguments: '--configuration $(buildConfiguration)'
-    projects: 'ThomasMathers.Infrastructure.IAM.Tests/ThomasMathers.Infrastructure.IAM.Tests.csproj'
+    projects: 'ThomasMathers.Infrastructure.ResponseWrapping/ThomasMathers.Infrastructure.ResponseWrapping.csproj'
 - task: NuGetCommand@2
   displayName: 'NuGet pack'
   inputs:
     command: 'pack'
-    packagesToPack: 'ThomasMathers.Infrastructure.IAM/ThomasMathers.Infrastructure.IAM.csproj'
+    packagesToPack: 'ThomasMathers.Infrastructure.ResponseWrapping/ThomasMathers.Infrastructure.ResponseWrapping.csproj'
     versioningScheme: 'byEnvVar'
     versionEnvVar: 'GitVersion.NuGetVersion'
 - task: PublishBuildArtifacts@1
