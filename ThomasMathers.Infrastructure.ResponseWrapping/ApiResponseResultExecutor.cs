@@ -30,7 +30,7 @@ namespace ThomasMathers.Infrastructure.ResponseWrapping
                 }
                 else
                 {
-                    result.Value = new ApiResult { Value = innerValue };  
+                    result.Value = new ApiResult { Error = innerValue };  
                 }
             }
 
