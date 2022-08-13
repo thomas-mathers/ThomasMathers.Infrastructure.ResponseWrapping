@@ -1,6 +1,6 @@
 variables:
   majorVersion: '1'
-  minorVersion: '2'
+  minorVersion: '3'
   buildConfiguration: 'Release'
   projectName: 'ThomasMathers.Infrastructure.ResponseWrapping'
 
