@@ -1,34 +1,32 @@
+variables:
+  majorVersion: '1'
+  minorVersion: '1'
+  buildConfiguration: 'Release'
+  projectName: 'ThomasMathers.Infrastructure.ResponseWrapping'
+
+name: '$(majorVersion).$(minorVersion).$(Rev:r)'
+
 trigger:
-- master
+  branches:
+    include:
+      - master
 
 pool:
   vmImage: ubuntu-latest
 
-variables:
-  buildConfiguration: 'Release'
 steps:
-- task: gitversion/setup@0
-  displayName: 'GitVersion setup'
-  inputs:
-    versionSpec: '5.x'
-- task: gitversion/execute@0
-  displayName: 'GitVersion execute'
-  inputs:
-    useConfigFile: true
-    configFilePath: 'GitVersion.yml'
 - task: DotNetCoreCLI@2
   displayName: 'dotnet build'
   inputs:
     command: 'build'
     arguments: '--configuration $(buildConfiguration)'
-    projects: 'ThomasMathers.Infrastructure.ResponseWrapping/ThomasMathers.Infrastructure.ResponseWrapping.csproj'
+    projects: '$(projectName)/$(projectName).csproj'
 - task: NuGetCommand@2
   displayName: 'NuGet pack'
   inputs:
     command: 'pack'
-    packagesToPack: 'ThomasMathers.Infrastructure.ResponseWrapping/ThomasMathers.Infrastructure.ResponseWrapping.csproj'
-    versioningScheme: 'byEnvVar'
-    versionEnvVar: 'GitVersion.NuGetVersion'
+    packagesToPack: '$(projectName)/$(projectName).csproj'
+    versioningScheme: 'byBuildNumber'
 - task: PublishBuildArtifacts@1
   displayName: 'Publish artifact'
   inputs:
